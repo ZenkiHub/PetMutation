@@ -69,7 +69,7 @@ end
 local reroll = createButton("ðŸŽ² Mutation Reroll", 45, Color3.fromRGB(140, 200, 255))
 local toggle = createButton("ðŸ‘ Toggle Mutation", 90, Color3.fromRGB(180, 255, 180))
 
--- ðŸ· Credit label at the bottom
+-- Credit label at the bottom
 local credit = Instance.new("TextLabel", frame)
 credit.Size = UDim2.new(1, 0, 0, 20)
 credit.Position = UDim2.new(0, 0, 1, -20)
