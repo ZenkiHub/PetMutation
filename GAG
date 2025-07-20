@@ -79,7 +79,7 @@ credit.BackgroundTransparency = 1
 credit.Font = Enum.Font.Gotham
 credit.TextSize = 13
 
--- ðŸ” Find mutation machine
+-- Find mutation machine
 local function findMachine()
 	for _, obj in pairs(Workspace:GetDescendants()) do
 		if obj:IsA("Model") and obj.Name:lower():find("mutation") then
@@ -96,7 +96,7 @@ end
 
 local basePart = machine:FindFirstChildWhichIsA("BasePart")
 
--- ðŸ’¡ Stylish ESP
+-- Stylish ESP
 local espGui = Instance.new("BillboardGui", basePart)
 espGui.Name = "MutationESP"
 espGui.Adornee = basePart
@@ -113,7 +113,7 @@ espLabel.TextStrokeTransparency = 0.3
 espLabel.TextStrokeColor3 = Color3.new(0, 0, 0)
 espLabel.Text = currentMutation
 
--- ðŸŒˆ Animate rainbow color
+-- Animate rainbow color
 local hue = 0
 RunService.RenderStepped:Connect(function()
 	if espVisible then
@@ -122,9 +122,9 @@ RunService.RenderStepped:Connect(function()
 	end
 end)
 
--- â™»ï¸ Reroll effect
+-- Reroll effect
 local function animateMutationReroll()
-	reroll.Text = "â³ Rerolling..."
+	reroll.Text = "Rerolling..."
 	local duration = 2
 	local interval = 0.1
 	for i = 1, math.floor(duration / interval) do
@@ -133,7 +133,7 @@ local function animateMutationReroll()
 	end
 	currentMutation = mutations[math.random(#mutations)]
 	espLabel.Text = currentMutation
-	reroll.Text = "ðŸŽ² Mutation Reroll"
+	reroll.Text = "Mutation Reroll"
 end
 
 toggle.MouseButton1Click:Connect(function()
